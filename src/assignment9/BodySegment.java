@@ -8,18 +8,37 @@ public class BodySegment {
 
 	private double x, y, size;
 	private Color color;
-	
+
 	public BodySegment(double x, double y, double size) {
-		//FIXME
-		
-		//See ColorUtils for some color options (or choose your own)
+		this.x = x;
+		this.y = y;
+		this.size = size;
+		this.color = Color.GREEN;
 	}
-	
+
 	/**
 	 * Draws the segment
 	 */
 	public void draw() {
-		//FIXME
+		StdDraw.setPenColor(color);
+		StdDraw.filledCircle(x, y, size);
 	}
 	
+	// Getter methods
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public double getSize() {
+		return size;
+	}
+
+	public void setPosition(double x, double y) {
+		this.x = x;
+		this.y = y;
+	}
 }
